@@ -1,6 +1,7 @@
 package com.lll.feng.controller;
 
-import jakarta.servlet.http.HttpServlet;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,11 +9,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.http.HttpRequest;
 
+@Tag(name = "文件上传下载API", description = "文件上传下载")
 @RestController
 public class FileUploadController {
 
+    @Operation(summary = "文件上传")
     @PostMapping("/upload")
     public String upload(String fileName, MultipartFile file, HttpServletRequest request) throws IOException {
         System.out.println(fileName);

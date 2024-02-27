@@ -1,6 +1,8 @@
 package com.lll.feng.controller;
 
 import com.lll.feng.pojo.entity.User;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
  * 4xx：客户端错误
  * 5xx：服务器端错误
  */
+@Tag(name="RestFul风格使用",description = "RestFul")
 @RestController
 public class RestFulController {
 
@@ -21,21 +24,25 @@ public class RestFulController {
      * @param id
      * @return
      */
+    @Operation(summary = "根据ID查询用户")
     @GetMapping("/user/query/{id}")
     public String getUserById(@PathVariable int id){
         return "根据ID查询用户";
     }
 
+    @Operation(summary = "新增用户")
     @PostMapping("/user/add")
     public String save(User user){
         return "新增用户";
     }
 
+    @Operation(summary = "修改用户")
     @PutMapping("/user/update")
     public String update(User user){
         return "修改用户";
     }
 
+    @Operation(summary = "根据ID删除用户")
     @DeleteMapping("/user/delete/{id}")
     public String deleteUserById(@PathVariable int id){
         return "根据ID删除用户";
