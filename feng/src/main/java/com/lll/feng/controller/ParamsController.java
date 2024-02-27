@@ -60,7 +60,7 @@ public class ParamsController {
     @Operation(summary = "对象接收参数")
     @RequestMapping(value = "/postTest2",method = RequestMethod.POST)
     public String postTest2(User user){
-        return "你好!"+user.getUsername()+user.getPwd();
+        return "你好!"+user.getUsername()+user.getPassword();
     }
 
     /**
@@ -72,6 +72,6 @@ public class ParamsController {
     @Operation(summary = "@RequestBody请求体接收参数")
     @RequestMapping(value = "/postTest3",method = RequestMethod.POST)
     public String postTest3(@RequestBody User user){
-        return "你好!"+user.getUsername()+user.getPwd();
+        return "你好!"+user.getUsername()+user.getPassword();
     }
 }

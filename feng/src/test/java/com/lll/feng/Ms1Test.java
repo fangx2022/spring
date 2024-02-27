@@ -12,9 +12,9 @@ public class Ms1Test {
         // 对象类型
         User user = new User();
         user.setUsername("a");
-        user.setPwd("b");
+        user.setPassword("b");
         userUpdate(user);
-        System.out.println("user outer:"+user.getUsername()+user.getPwd());
+        System.out.println("user outer:"+user.getUsername()+user.getPassword());
         // 基本类型
         int i = 1;
         int j = 2;
@@ -30,8 +30,8 @@ public class Ms1Test {
 
     public static void userUpdate(User user){
         user.setUsername("c");
-        user.setPwd("d");
-        System.out.println("user inner:"+user.getUsername()+user.getPwd());
+        user.setPassword("d");
+        System.out.println("user inner:"+user.getUsername()+user.getPassword());
     }
 
     public static void intAdd(int i,int j){
