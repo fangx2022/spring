@@ -1,6 +1,6 @@
 package com.lll.feng.controller;
 
-import com.lll.feng.pojo.entity.User;
+import com.lll.feng.pojo.entity.UserInfoEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
@@ -59,8 +59,8 @@ public class ParamsController {
      */
     @Operation(summary = "对象接收参数")
     @RequestMapping(value = "/postTest2",method = RequestMethod.POST)
-    public String postTest2(User user){
-        return "你好!"+user.getUsername()+user.getPassword();
+    public String postTest2(UserInfoEntity userInfoEntity){
+        return "你好!"+ userInfoEntity.getUsername()+ userInfoEntity.getPassword();
     }
 
     /**
@@ -71,7 +71,7 @@ public class ParamsController {
      */
     @Operation(summary = "@RequestBody请求体接收参数")
     @RequestMapping(value = "/postTest3",method = RequestMethod.POST)
-    public String postTest3(@RequestBody User user){
-        return "你好!"+user.getUsername()+user.getPassword();
+    public String postTest3(@RequestBody UserInfoEntity userInfoEntity){
+        return "你好!"+ userInfoEntity.getUsername()+ userInfoEntity.getPassword();
     }
 }

@@ -1,6 +1,6 @@
 package com.lll.feng;
 
-import com.lll.feng.pojo.entity.User;
+import com.lll.feng.pojo.entity.UserInfoEntity;
 
 public class Ms1Test {
     public static void main(String[] args) {
@@ -10,11 +10,11 @@ public class Ms1Test {
         add(s1,s2);
         System.out.println("方法外："+s1+s2);
         // 对象类型
-        User user = new User();
-        user.setUsername("a");
-        user.setPassword("b");
-        userUpdate(user);
-        System.out.println("user outer:"+user.getUsername()+user.getPassword());
+        UserInfoEntity userInfoEntity = new UserInfoEntity();
+        userInfoEntity.setUsername("a");
+        userInfoEntity.setPassword("b");
+        userUpdate(userInfoEntity);
+        System.out.println("user outer:"+ userInfoEntity.getUsername()+ userInfoEntity.getPassword());
         // 基本类型
         int i = 1;
         int j = 2;
@@ -28,10 +28,10 @@ public class Ms1Test {
         System.out.println("方法内："+s1+s2);
     }
 
-    public static void userUpdate(User user){
-        user.setUsername("c");
-        user.setPassword("d");
-        System.out.println("user inner:"+user.getUsername()+user.getPassword());
+    public static void userUpdate(UserInfoEntity userInfoEntity){
+        userInfoEntity.setUsername("c");
+        userInfoEntity.setPassword("d");
+        System.out.println("user inner:"+ userInfoEntity.getUsername()+ userInfoEntity.getPassword());
     }
 
     public static void intAdd(int i,int j){

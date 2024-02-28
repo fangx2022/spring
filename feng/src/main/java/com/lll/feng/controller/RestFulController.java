@@ -1,6 +1,6 @@
 package com.lll.feng.controller;
 
-import com.lll.feng.pojo.entity.User;
+import com.lll.feng.pojo.entity.UserInfoEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
@@ -32,13 +32,13 @@ public class RestFulController {
 
     @Operation(summary = "新增用户")
     @PostMapping("/user/add")
-    public String save(User user){
+    public String save(UserInfoEntity userInfoEntity){
         return "新增用户";
     }
 
     @Operation(summary = "修改用户")
     @PutMapping("/user/update")
-    public String update(User user){
+    public String update(UserInfoEntity userInfoEntity){
         return "修改用户";
     }
 
