@@ -4,6 +4,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * 跨域问题是由浏览器的同源策略造成的，浏览器会阻止页面的脚本去访问不同源的资源
+ * 不同源：域名、端口、协议不同
+ * 域名=主机名+域名后缀  .com商业 .edu教育 .net网络服务 .cn国家地区 .org非盈利组织 
+ */
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
