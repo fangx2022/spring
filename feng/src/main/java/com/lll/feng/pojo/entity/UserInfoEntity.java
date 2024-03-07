@@ -24,6 +24,9 @@ public class UserInfoEntity {
     @TableField(value="age")
     private Integer age;
 
+    @TableField(value="description")
+    private String description;
+
     @TableField(value="create_date")
     private String createDate;
 

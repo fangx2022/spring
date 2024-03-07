@@ -12,13 +12,14 @@ public interface UserInfoMapper extends BaseMapper<UserInfoEntity> {
     /**
      * 连表查询 1对多
      */
-    @Select("select user_id,user_name,password,age,create_date from user_info")
+    @Select("select user_id,user_name,password,age,create_date,description from user_info")
     @Results(
             {
                     @Result(column = "user_id",property = "userId"),
                     @Result(column = "user_name",property = "username"),
                     @Result(column = "age",property = "age"),
                     @Result(column = "create_date",property = "createDate"),
+                    @Result(column = "description",property = "description"),
                     @Result(column = "user_id",property = "orders",javaType = List.class,
                     many=@Many(select = "com.lll.feng.mapper.OrderInfoMapper.selectOrderListByUserId"))
             }

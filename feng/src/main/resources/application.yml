@@ -5,9 +5,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/feng?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
-    username: root
-    password: root
+    url: jdbc:mysql://114.55.64.235:3306/feng?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: fangx
+    password: fangx
   devtools:
     restart:
       enabled: true
